@@ -1,4 +1,8 @@
-variable "region" {}
+variable "region" {
+  description = "AWS region"
+  default     = "us-east-1"
+}
+
 variable "vpc_cidr" {
   type        = string
   default     = "192.168.0.0/21"

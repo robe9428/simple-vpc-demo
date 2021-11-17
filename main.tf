@@ -1,7 +1,6 @@
-resource "aws_vpc" "imgmgr_common_vpc" {
+resource "aws_vpc" "tf_demo_vpc" {
   cidr_block = var.vpc_cidr
 }
-
 
 resource "aws_subnet" "private-subnets" {
   vpc_id     = aws_vpc.imgmgr_common_vpc.id
