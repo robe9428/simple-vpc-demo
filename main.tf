@@ -1,5 +1,9 @@
 resource "aws_vpc" "tf_demo_vpc" {
   cidr_block = var.vpc_cidr
+
+  tags = {
+    Name     = "Demo TF Cloud VPC"
+  }
 }
 
 resource "aws_subnet" "private-subnets" {
