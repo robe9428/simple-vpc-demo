@@ -3,7 +3,7 @@ resource "aws_vpc" "tf_demo_vpc" {
 }
 
 resource "aws_subnet" "private-subnets" {
-  vpc_id     = aws_vpc.imgmgr_common_vpc.id
+  vpc_id     = aws_vpc.tf_demo_vpc.id
   count      = length(var.azs)
   cidr_block = element(var.private-subnets , count.index)
   availability_zone = element(var.azs , count.index)
@@ -14,7 +14,7 @@ resource "aws_subnet" "private-subnets" {
 }
 
 resource "aws_subnet" "public-subnets" {
-  vpc_id     = aws_vpc.imgmgr_common_vpc.id
+  vpc_id     = aws_vpc.tf_demo_vpc.id
   count      = length(var.azs)
   cidr_block = element(var.public-subnets , count.index)
   availability_zone = element(var.azs , count.index)
