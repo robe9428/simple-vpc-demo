@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = aws_vpc.imgmgr_common_vpc.id
+  value = aws_vpc.tf_demo_vpc.id
 }
 
 output "public_subnet_id" {
