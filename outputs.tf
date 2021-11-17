@@ -9,7 +9,3 @@ output "public_subnet_id" {
 output "private_subnet_id" {
   value = [aws_subnet.private-subnets.*.id]
 }
-
-output "nat_gw_id" {
-  value = [aws_nat_gateway.imgmgr-nat-gateway.*.id]
-}
